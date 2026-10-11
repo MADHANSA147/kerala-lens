@@ -1,0 +1,2048 @@
+{
+  "method": "Frozen visual features + logistic regression; GeoCLIP coordinate model unchanged",
+  "selected_features": "clip",
+  "selected_C": 100.0,
+  "model_selection": "12 candidates selected using validation balanced accuracy, breaking ties by log loss. Test labels never used for selection.",
+  "validation_candidates": [
+    {
+      "features": "clip",
+      "C": 0.1,
+      "validation_balanced_accuracy": 0.6393939393939394,
+      "validation_log_loss": 0.6752057441804565
+    },
+    {
+      "features": "clip",
+      "C": 1.0,
+      "validation_balanced_accuracy": 0.6075757575757575,
+      "validation_log_loss": 0.6105267910287372
+    },
+    {
+      "features": "clip",
+      "C": 10.0,
+      "validation_balanced_accuracy": 0.656060606060606,
+      "validation_log_loss": 0.564134110280756
+    },
+    {
+      "features": "clip",
+      "C": 100.0,
+      "validation_balanced_accuracy": 0.706060606060606,
+      "validation_log_loss": 0.643806721323426
+    },
+    {
+      "features": "geoclip",
+      "C": 0.1,
+      "validation_balanced_accuracy": 0.5924242424242424,
+      "validation_log_loss": 0.6558260103165122
+    },
+    {
+      "features": "geoclip",
+      "C": 1.0,
+      "validation_balanced_accuracy": 0.6075757575757575,
+      "validation_log_loss": 0.5879028696819661
+    },
+    {
+      "features": "geoclip",
+      "C": 10.0,
+      "validation_balanced_accuracy": 0.6227272727272727,
+      "validation_log_loss": 0.6032799886868656
+    },
+    {
+      "features": "geoclip",
+      "C": 100.0,
+      "validation_balanced_accuracy": 0.6545454545454545,
+      "validation_log_loss": 0.7635048977360319
+    },
+    {
+      "features": "combined",
+      "C": 0.1,
+      "validation_balanced_accuracy": 0.6075757575757575,
+      "validation_log_loss": 0.6642948012930743
+    },
+    {
+      "features": "combined",
+      "C": 1.0,
+      "validation_balanced_accuracy": 0.6075757575757575,
+      "validation_log_loss": 0.5893292693589653
+    },
+    {
+      "features": "combined",
+      "C": 10.0,
+      "validation_balanced_accuracy": 0.6242424242424243,
+      "validation_log_loss": 0.568762218076141
+    },
+    {
+      "features": "combined",
+      "C": 100.0,
+      "validation_balanced_accuracy": 0.7045454545454546,
+      "validation_log_loss": 0.6673378484094005
+    }
+  ],
+  "accuracy_claim": "Measured only on this supplied dataset. No guarantee on new locations or interiors.",
+  "threshold_selection": "Validation only; target empirical precision 0.90 per class, at least 5 accepted examples per class. This is not calibrated confidence.",
+  "low": 0.0,
+  "high": 0.9425676326644162,
+  "validation": {
+    "images": 63,
+    "accepted": 17,
+    "uncertain": 46,
+    "coverage": 0.2698412698412698,
+    "accuracy_counting_uncertain_as_incorrect": 0.25396825396825395,
+    "accuracy_on_accepted": 0.9411764705882353,
+    "classes": {
+      "non_kerala": {
+        "precision": null,
+        "recall_including_abstentions": 0.0,
+        "support": 30,
+        "predicted": 0,
+        "correct": 0
+      },
+      "kerala": {
+        "precision": 0.9411764705882353,
+        "recall_including_abstentions": 0.48484848484848486,
+        "support": 33,
+        "predicted": 17,
+        "correct": 16
+      }
+    },
+    "balanced_accuracy_including_abstentions": 0.24242424242424243
+  },
+  "held_out_test": {
+    "images": 53,
+    "accepted": 4,
+    "uncertain": 49,
+    "coverage": 0.07547169811320754,
+    "accuracy_counting_uncertain_as_incorrect": 0.07547169811320754,
+    "accuracy_on_accepted": 1.0,
+    "classes": {
+      "non_kerala": {
+        "precision": null,
+        "recall_including_abstentions": 0.0,
+        "support": 28,
+        "predicted": 0,
+        "correct": 0
+      },
+      "kerala": {
+        "precision": 1.0,
+        "recall_including_abstentions": 0.16,
+        "support": 25,
+        "predicted": 4,
+        "correct": 4
+      }
+    },
+    "balanced_accuracy_including_abstentions": 0.08
+  },
+  "held_out_test_forced_binary": {
+    "images": 53,
+    "accepted": 53,
+    "uncertain": 0,
+    "coverage": 1.0,
+    "accuracy_counting_uncertain_as_incorrect": 0.7358490566037735,
+    "accuracy_on_accepted": 0.7358490566037735,
+    "classes": {
+      "non_kerala": {
+        "precision": 0.7692307692307693,
+        "recall_including_abstentions": 0.7142857142857143,
+        "support": 28,
+        "predicted": 26,
+        "correct": 20
+      },
+      "kerala": {
+        "precision": 0.7037037037037037,
+        "recall_including_abstentions": 0.76,
+        "support": 25,
+        "predicted": 27,
+        "correct": 19
+      }
+    },
+    "balanced_accuracy_including_abstentions": 0.7371428571428571
+  },
+  "model_fingerprint": "eeab89b2f6b43a1e8814f775bf79a7aaaec8305806d8732fb489109370447d49",
+  "dataset": [
+    {
+      "sha256": "ba5a7c359f74c1bce2304f8abdad2c793139f9c83a569088e4ca3900cdc7eb01",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "66ed9d99333e19102eb0a4950403b1c9e8997d6dccdcec461f83ad2a40f740aa",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "39ca0eb3dc174b2c95db139cc655ccc11305982a760388fb822b4692fb3100ff",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "92b09af5263cb20915bca3f3d90acef32605cc0c9cec6e26ce4ece278402cdf4",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "3891b91a18633bf16fe4b19d590d955ae3a86d19eabb8d8dc87ff0c0f3688df5",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "02d0749040c29a2532da76beb820b5f654962cfcb0517d8611e4e97121ae72e5",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "7716a4b74385bb76705401bb10f7e2ea44a89e4ea533b57aaa4c6dbca9d0e80a",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "c9abfbfe05dee9b5234e261a265781828e8e4dee80c0b66f3a473c554b8752ad",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "0486fa21df44652bcc9e17ed1defd0f46bafda821d0a64fe2f086dcfce21c10e",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "8e220d362b8d977172e9570e263f498cc09d91e139fab5c10996e4d7dfbdc530",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "6e4078580c09d4295b823800f5787355234e30b2a8a065548a006ed6ecc8a028",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "d1078925775fa935ce50e3a86ff429a95356de9e82c9cbb27b8bf4693d812db9",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "2e29ecc66a8fe4ae5cb4470c6370909dbfae119790d07cfbcde609a16937f032",
+      "label": 1,
+      "group": "Kochi",
+      "split": "train"
+    },
+    {
+      "sha256": "351763e7e797b4439825e6d5a59e4c475908a51e51409138b960d53180a120db",
+      "label": 1,
+      "group": "Kozhikode",
+      "split": "train"
+    },
+    {
+      "sha256": "2bd6eea40f481438db751b7f105befa7cf869c47ab5d2b7b41898c34c6ef9a0c",
+      "label": 1,
+      "group": "Kozhikode",
+      "split": "train"
+    },
+    {
+      "sha256": "7adb0f1edaf5e590e2771f7ea3883a9407a4ec9be760e96c7d0bad58dd3bf13d",
+      "label": 1,
+      "group": "Kozhikode",
+      "split": "train"
+    },
+    {
+      "sha256": "2719062ce5e7abea6d91909be2db5841e34a2d990b81f08a16e8e873e5ad54d6",
+      "label": 1,
+      "group": "Kozhikode",
+      "split": "train"
+    },
+    {
+      "sha256": "9f26b7ac537ea9eed655abde83ceaeaae59c362376ff9ac7a20ed01cb6be310f",
+      "label": 1,
+      "group": "Kozhikode",
+      "split": "train"
+    },
+    {
+      "sha256": "9d8b74082138e2b8500a93d1f37c7c8bc29c408975a795f3fbf30b435120ff3e",
+      "label": 1,
+      "group": "Kozhikode",
+      "split": "train"
+    },
+    {
+      "sha256": "4843efab641008e19b46e3cc1d2418c707b4525a217d795d49c47bfc8289ee09",
+      "label": 1,
+      "group": "Kozhikode",
+      "split": "train"
+    },
+    {
+      "sha256": "e9a2847825b630ef02f53b3f5492ef98516ef7b4302e6d5e468988ad76543c08",
+      "label": 1,
+      "group": "Kozhikode",
+      "split": "train"
+    },
+    {
+      "sha256": "40b4e3df9fc78c1e0f97c8653d6d9a08e0515c7349d7690199d143c74de2ab74",
+      "label": 1,
+      "group": "Thrissur",
+      "split": "train"
+    },
+    {
+      "sha256": "6a3d17ef17e1796e8cd83a615150797593fb80d7772b0dd0e146e772fa468595",
+      "label": 1,
+      "group": "Thrissur",
+      "split": "train"
+    },
+    {
+      "sha256": "9294896d567a2b6eb8069968c376747542351e9bdc1d86791d4d0ffd56f345b2",
+      "label": 1,
+      "group": "Thrissur",
+      "split": "train"
+    },
+    {
+      "sha256": "1f01ccbb320341382067a0829fecc92943ed1ad1f50f382e00cf169a312803b0",
+      "label": 1,
+      "group": "Thrissur",
+      "split": "train"
+    },
+    {
+      "sha256": "920f70aa3a03dc56f4f6f85570f5441ed3d52142ced5c9c98e73afbc8f239566",
+      "label": 1,
+      "group": "Thrissur",
+      "split": "train"
+    },
+    {
+      "sha256": "370b2d9236d6afaf4044cbffb3d856cc671df7fe54bacf0645c4f422e0e067cd",
+      "label": 1,
+      "group": "Thrissur",
+      "split": "train"
+    },
+    {
+      "sha256": "822f4442d288703b009da5352e39fd3183a5fa81a023dfbb26a3c02f43741a52",
+      "label": 1,
+      "group": "Thrissur",
+      "split": "train"
+    },
+    {
+      "sha256": "f16a71e90c900a041f3c58f3e3540ac9bc512ffe78b3afa601c1bb3f63a78d44",
+      "label": 1,
+      "group": "Kollam",
+      "split": "train"
+    },
+    {
+      "sha256": "801dd05d776b4181fe8a57316b386a7af2806602f2ccd70ce6ce7eeb77d0c5ba",
+      "label": 1,
+      "group": "Kollam",
+      "split": "train"
+    },
+    {
+      "sha256": "bde3ebf51634d175977a0b97fddcc84ce5c634dd4007b73a425e85242b5f1f72",
+      "label": 1,
+      "group": "Kollam",
+      "split": "train"
+    },
+    {
+      "sha256": "bc238f3c453d376706cc6629b55eac533ad6feae53e0fc2f1390234b6a61d8b0",
+      "label": 1,
+      "group": "Kollam",
+      "split": "train"
+    },
+    {
+      "sha256": "0b135ab0c25f10608db0109872709bdd9645a22942e462e954c9e50cb14f1d23",
+      "label": 1,
+      "group": "Kollam",
+      "split": "train"
+    },
+    {
+      "sha256": "c5cccb10752f367e3f605d2e8e42255302144a63dfd8a49aac88ad81ab9a14af",
+      "label": 1,
+      "group": "Kollam",
+      "split": "train"
+    },
+    {
+      "sha256": "b2f886c6f59e6522f915b46d469c9049e83046762703b8600abde223d4be6142",
+      "label": 1,
+      "group": "Kollam",
+      "split": "train"
+    },
+    {
+      "sha256": "b111ae9ca2dd155e0efb813b79b348bc50c2cb9aaa74a0ba9070730f0cbee718",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "3d6f6505e611b77e24b85ff02b1b05172a97833f0b5f855daf54aba4cd208366",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "e7f4a1d21b6f0130056616b196bd995a5f3e48233cf053dccb492684ca0c193b",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "0fae563d20b1130730841adf9bd024e0ccce6272d5a388dc8f7f06c7ddfe6917",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "39a0665cf39749ecb48056d007755c747b0bb98302710cd68ff6f7863a9d4011",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "2bf911b7e88547464746fbf023b697decc9bb1c086bfd7e2fd74c1c1ff21eff7",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "c9992acff453546f7244ddf7966a23e5b16475e41e918f5de6697eb7a59c1b3c",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "392d628c1bb402e762092a4f5025c562d595a044a522339d25f403516f62dada",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "792110321fc8903007025a166db2966bda351b0b8f394de970e8a0e3ab7ffbdd",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "98a6d5bbc5e1bc7b8919f07d241b465d76dac941cba283fb1c0eb4ce19554c81",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "714d6532f3d89d8d4dd400d0a39440cb47d657a81ae7d0bc3918e3f33b1f6993",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "e2f35f87e5c190110b317e6989e364d8fd9fa9f3c0fe13d9cad549676f38b9f6",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "4ad78179e2b0400da245856ecb9aceaf555d523800ff0d770665f4084d857912",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "3f4407806892eb938c90a67a06ac0b084717568961681e2fe2082715edee9e10",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "99d4a03c1089331737b593f2bd3a148ddac0c863f2bf6c709f4c20e67478e684",
+      "label": 1,
+      "group": "Palakkad",
+      "split": "train"
+    },
+    {
+      "sha256": "bc66dce3fd692f3558ef4a9a8f45e6f56da1d09f8b05fd2c9db5cc0598933949",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "c7f95d23067a7952e0ff94c29a7c7d2e922d87ff0ad38cdb6dbd1e5017fad832",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "701d0284be520a4f03a7cc7d52016170d23025d918d2f9e39bfbe88c9300fb20",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "17a6bb3541a0eb20efb820bfb7bcd8ea57ef0ab810188e1fceb8a547533307d6",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "f5129cbd782baf186555ef6618f48e1ee30084d8a08c23490a1c2de95dc46370",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "a9d238bd4c1a5576ce2d418814c9fd50dc46c5828bc23fc18b2cb08ac8ea953d",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "7475e11b6f7f516494b6913a0c58f7fec9d3d37666ee9edbc3749ff09e392569",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "086f89f9304d4bf560775fda3845bc94e61decc073f04dc2d93e4e2b78826c92",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "518e15187e841ae963ede47eeea5d131aaea6bd71a58914fd5ea2e9bac4f1c6a",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "7232dddda39f2ab5054173d33fef12963687ba327df6fecdc1508fd65ab9cef2",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "c2002eeeb158714f7b35a13c4470e06627f039fdfdf4ea090f4f9ffec418fa4d",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "966af5976ee68b4f66b250ac531611d3bc8e235032aa9f1265913a1cf91e1087",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "7f003ad566df2810f45f58f6968a40ccb9b99b875b2d56368152a45dab9c6392",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "4bd50614cfeb91284eb9f1995cd074f9cfae5dee5d8a75d9482bbfca0f5dae2b",
+      "label": 1,
+      "group": "Alappuzha",
+      "split": "train"
+    },
+    {
+      "sha256": "eadc73ce9b4398a73e8c4d084d3a75dbbb64ccaee159b99a45f4f8a5ce8f6bff",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "10c8c16a60455eb367a97645b762cc93d243fa504cd5bdfc433539ba4de3904f",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "938a80c4c0a6d0c0ead785855dc49d5ffba106550ace6d7d80ef5816300f4a9a",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "3c85dc1cd7a3e46379179e81435f7537b5b45f8d724bf058fc49f7a1a9e9183f",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "9d8744b30078455826a613a6af6166bbd3778842923229d7c7e3ce32339d3a8a",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "d56cace3f2c5518e7905320271bfd2251742120837020826d56ee092790d7dbe",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "d8eedb6c03130cdda86740483ed661cf9113a6a4d27ee2f92d86a6c60536a7c6",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "9b3f5365cbfc7393b43bf07fc8a805da14de288bee5f6dfd1a2850adcd41ccfa",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "ed2cab0b7c6134f27c155f35c84053ee58fa75d714c9e7bf9a20d876e8181590",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "4fe9b118832fcd9a236b458ffbeb803e1094e797338af3632e9bb7cceee36679",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "b6bae67c5012672db9d8f1802882a570cd24631be6fae9be5e9578ed2e92d47c",
+      "label": 1,
+      "group": "Munnar",
+      "split": "train"
+    },
+    {
+      "sha256": "ea71b908efb1c64d031a9dab0506bbf664d1d5a5cb32d1798ec4702227425484",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "70fc815724fc8c4ec845c86af95296816b731afb8c58944fb8b5b08a0bdd3515",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "309026ca5f5a7d102addfb9a9684830e973af170620487b06c289fa332d7b421",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "b1d0fefd4c830670cf5b99414caf64c1e4594bf52b24737a5546a4798e18073d",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "68a13e809f55f45436e335e8e2ab8ac62aa5d4764113c1ad47608c67c32c6a4b",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "7a568b92a51fa8abc0658f483e6b948746435f5e56d5f2f36cfb2145631b1623",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "314247ff63d39623ddfb5073a5281e938a0fbe4c9f32c7601813ab77bf46cece",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "a9086d500069e4f3383d6d6a4c0c6779a134dbd5060cc3223f33a3e881344619",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "4a07a404faf8e660dbfb67edcf204924a6b8b2afc263fbab876d67a0e753156c",
+      "label": 1,
+      "group": "Kannur",
+      "split": "train"
+    },
+    {
+      "sha256": "289abd7054ea19ee1970d57a2e20135c3f570312bd720e42649b335ed1e29873",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "72ff3fc53c466d6c63ed24a0d1461de1c456aa36be680edafd5efc0f063a9d94",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "8a5fbce8dd4d9069f665e39809778131d91be27183102fedf6353396350a6469",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "551f6345817f0c36ba052e839c85842d449891ab89fd148afbbea90f651bfec9",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "80c62537d20244aa1079f09715f08725c9e73edd8ae76cc35b51e1a691518d0e",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "ce603dea3a5f2d11dedf53bee09c2213e5ab3f406278101f5bdc51f38ee5c5ae",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "eff8107f52a40b98fc7b091a2e059d169bf305ff4cfbd6819b0ae75efcf12384",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "79c3e9fc3df956d7d5d0953b8971677215423227207689d5f7a2c218954a7695",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "3fc0182cf23f2bd416780c7f781a008dd2705c40a4398ec5bc552c02039a4602",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "79233002026a0dcc7d95b25e517a6dc96b4bd11264b3fee774f168db2c29eafb",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "81a629139729002c3383b8a983d39e27dfe6148e058508870e24c31a51b6d50e",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "83b6faef1fdfdfda0af03ea1e03cc18fbff63549557d44ad8b8a7dda294a6e2b",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "9f600932e61c60c7f78844056a592097c707a03cb54f8f080bac644d361b5e4c",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "bc1e253a26a5d883de6de17bce04cd6afb1f92d9ebecb4f28769d9c5d5b80989",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "67b56b9c3f05113f1d79cd99517c2a152a9436a928c8a9696960d6ff2ddbeb59",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "1f845e1d3ffedcdd9328f53a45f04a85eb856c557938172bf54c5b4d88eaec02",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "6a07eda79e7ae8c9cbaf92096ea63a5b3f7c4798c214a23d395ae962f75b864c",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "75bd263bf4962b4cc53512ccdef081930f045c93e63be7f90b664261167dd0c4",
+      "label": 1,
+      "group": "Thiruvananthapuram",
+      "split": "test"
+    },
+    {
+      "sha256": "7cabe97cb6d6153c7ed484a63e01e106f96b16f81f5846ff3d1033a8021fb32b",
+      "label": 1,
+      "group": "Thiruvananthapuram",
+      "split": "test"
+    },
+    {
+      "sha256": "a52b3a43b72f25360fa566be8a8fea745ae97d8e05d00eafb3e35115d375c12a",
+      "label": 1,
+      "group": "Thiruvananthapuram",
+      "split": "test"
+    },
+    {
+      "sha256": "0c9dbbbcd00a61feeb32b857878cf266317a81c8270cccb65244012571197619",
+      "label": 1,
+      "group": "Thiruvananthapuram",
+      "split": "test"
+    },
+    {
+      "sha256": "c3489e05df2d34ff87ae241dbe1ebcd0ce7304a785aff08e68f58e848cc1b5b2",
+      "label": 1,
+      "group": "Thiruvananthapuram",
+      "split": "test"
+    },
+    {
+      "sha256": "7b206190c74e35f924543fdfdeaec1d02860733ac7b77ce80e44a51385b6059a",
+      "label": 1,
+      "group": "Thiruvananthapuram",
+      "split": "test"
+    },
+    {
+      "sha256": "748d785c030b9d6cdb8a938f68a91516921772b9fa76426c0385b1ee95e25051",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "c5de73a7618d396382e9686434069938eb0b0a1c6a5c14fa9a2041c72d6bc646",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "48de94524abacf3d4bd375aa871e93ea8d638d53cdf86416b323a72ef4dba5f7",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "3e6220ea5f7933dc7d5b52deed07fcfb38e54568d592dfd3e7c217692684de1b",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "503d0dd4b26a088776ee2443b90624390eaf9e10ec57e916a37ff7a207995e1c",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "593328fcd3279ee74db1d828803b11b2cbc4ed160f45a369c03889eded101b0e",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "31181d675659342fa5c90a36ce4d99b9f3392a4027527503abb97e03dde7dcb6",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "513a6f41bbf3d4eced7178d77d8f0c6d36ed6c5d7dd52b0171f01434f537e113",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "4a5e1e2b9dc234ba73db3433a92369b570729baf090e9785e7f27365ce198ea2",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "cab9dda693a018f0e3e9543e9f2e68740e6213f58ab45bfbcebe223e18840c8c",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "14b8fa2c279675eb06b230e9c7fdb1e58fd1525a6ae0b8c6307e2fa15205f244",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "3db5e0c8c9b5fc7c8ecd458f493726aaeb00fb2eab16f1827d7482c33d5aabe9",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "09fa111c1577e720266a46aa19bcd03a3c869ae64c518f32051dfd044cfcef45",
+      "label": 1,
+      "group": "Kasaragod",
+      "split": "test"
+    },
+    {
+      "sha256": "faea7dfa29bff904c6818218b12c9eee137127e82a23277bad685befd14ad4aa",
+      "label": 1,
+      "group": "Pathanamthitta",
+      "split": "test"
+    },
+    {
+      "sha256": "2ffb151a03ce2e2ac5190e7ab095faf587eb46f971fdec19db81890718d50345",
+      "label": 1,
+      "group": "Pathanamthitta",
+      "split": "test"
+    },
+    {
+      "sha256": "26403863d28c95696e1dde50f10dfcfc37429d73eba12d9e82d74c43a8f8e113",
+      "label": 1,
+      "group": "Pathanamthitta",
+      "split": "test"
+    },
+    {
+      "sha256": "6a71e796e1a9297e6f2e36933dbc7bc2512d9e47272df63982c7c3330bb13ac2",
+      "label": 1,
+      "group": "Pathanamthitta",
+      "split": "test"
+    },
+    {
+      "sha256": "74743bc3eb2e67b8871d9c7643d9cf9717c8d81b82e38bfa0c0e7c9fb73645eb",
+      "label": 1,
+      "group": "Pathanamthitta",
+      "split": "test"
+    },
+    {
+      "sha256": "16630c3d27c6967c192d178b04a8dcbfa2d15a94d39b34e9d9a5c37a93c2d7f8",
+      "label": 1,
+      "group": "Pathanamthitta",
+      "split": "test"
+    },
+    {
+      "sha256": "522beac2bed0df2e4ac427d10eda35e03289bf6991d2939c01785e963dc4b421",
+      "label": 0,
+      "group": "Mangaluru",
+      "split": "train"
+    },
+    {
+      "sha256": "35f8bd16feabcb8177db57afb687b26fc1325676cc09480de4c2fa60c87af9c5",
+      "label": 0,
+      "group": "Mangaluru",
+      "split": "train"
+    },
+    {
+      "sha256": "798269cdc0d5aae78687176fb7e72254e7a8878323aa1ac67d9145b8c99bd2cc",
+      "label": 0,
+      "group": "Mangaluru",
+      "split": "train"
+    },
+    {
+      "sha256": "c1949db14139d0671df097c11751e2ba26a0c8036c77e3597c273fcdf7705c84",
+      "label": 0,
+      "group": "Mangaluru",
+      "split": "train"
+    },
+    {
+      "sha256": "fc6d9361a06e954684fe1e1500ecfc3e97bc806dda9e0aaaca9f69cbdfbbc9c4",
+      "label": 0,
+      "group": "Mangaluru",
+      "split": "train"
+    },
+    {
+      "sha256": "1f6d8b53a21adf2dd32d497d37c70baa3b8f87663824a212cb362a779926e381",
+      "label": 0,
+      "group": "Mangaluru",
+      "split": "train"
+    },
+    {
+      "sha256": "2b8309b30abde5dc594c00e577d55e6bd5a6f18dc2f5f5ae672d7b6bb97c2c5b",
+      "label": 0,
+      "group": "Mangaluru",
+      "split": "train"
+    },
+    {
+      "sha256": "0b58ac97151d2ed7db8f38621573f338395a7792b1f8f0f9e6b706f0dedbabb9",
+      "label": 0,
+      "group": "Mangaluru",
+      "split": "train"
+    },
+    {
+      "sha256": "02bb6ec1cf34ff6588abc82d1df294fe4f4b2ea1f3e13a9cb88599479a1a1a67",
+      "label": 0,
+      "group": "Coimbatore",
+      "split": "train"
+    },
+    {
+      "sha256": "5b166d9d0f8a0e25e1e506f47d4222c268af6a37694556030d675d5055ed6a68",
+      "label": 0,
+      "group": "Coimbatore",
+      "split": "train"
+    },
+    {
+      "sha256": "65175555039d0632c29e13d1bb2b7d277aa3e23ef472eed90c8bc0ebdb8cb7c0",
+      "label": 0,
+      "group": "Coimbatore",
+      "split": "train"
+    },
+    {
+      "sha256": "cf0624ec07295cbb3563ef51f85aac21c96955f44da9876f520b17e804bb9572",
+      "label": 0,
+      "group": "Coimbatore",
+      "split": "train"
+    },
+    {
+      "sha256": "133edd1295fb9d4706e56bdf5fca0aa78a5ef3f9baf325c57c05708d31fa452b",
+      "label": 0,
+      "group": "Coimbatore",
+      "split": "train"
+    },
+    {
+      "sha256": "6f9c259e8830df5c3c85d5a408a2db5b7f77fa238a0be7e8712934703071a122",
+      "label": 0,
+      "group": "Coimbatore",
+      "split": "train"
+    },
+    {
+      "sha256": "d50b56e93cdf0122a6579250f4c2077a0fa12a18078c42c9ac8c8a8075d9cee8",
+      "label": 0,
+      "group": "Coimbatore",
+      "split": "train"
+    },
+    {
+      "sha256": "8937dace75ba432e5d2b5398325c49de4acfbc39759eef5c4ce46dd015c0a2f8",
+      "label": 0,
+      "group": "Coimbatore",
+      "split": "train"
+    },
+    {
+      "sha256": "fac4f587fda7e1b8e11247268115922640e991e02e19708c8ca91a4725c57f2c",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "c657ed6812515d85ca325085dcd047ef63fde160197596e409042554c5465473",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "0d4fd295823a9557500dc4ab95ecbadd377a8d814375d5280dc031a2d67e3041",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "db99df98a988ec5048fd441416f0f8694db25e7f869383e2d43c5b2241bf1fdf",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "7c698d7abb1f38ee6ad50432334a185a1292f6b002774834bd274bd817cb0393",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "d8e1133a47f023c20ca5a5ed0d9a8dbee76840d8903f80c9c963313d5101115a",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "16c473c9c2d58a0cea9da450ffadc3654e90cb1a0ce26a7655c228267bd6ff5e",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "0a01ede87ef2032d10c62c24f44fdb347e2ff5834d115fa5e63585ccac533db4",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "7bfb5b30a2de521dea40934e9a7ea1f390e63f37bed1220dc8d95cd735dd1f6b",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "059113479d5122e7c70a96f4ec9c2b5605b93738efbb313abb663a56b7ae7304",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "25e436137efea97c1b91e8be842abb3afc240aa0e2ccbc54d732386f0d06c48b",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "1b1728dd091541275054fed77f83e369541e272a7124b2f1e6afaa9d31fbbff2",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "489d0fd8340cff1dd513e83c10c65c3fe297ca99eea21e1fb9093bde0c5d9b71",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "336e3397374774999f7bd16bd2aa9aa09b24f801dc25a4026a34d34e2b431ec9",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "9d45db4a334d00054a5f23a8ae90b8949e6d05369422dd47f0ac5c26e84f1e0d",
+      "label": 0,
+      "group": "Mysuru",
+      "split": "train"
+    },
+    {
+      "sha256": "52131f831ec04e8b1a661a6edb35c06f09e18c70f5d1d78ad9d72ecde2abfcae",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "0edac4b7a8ef1a18152cf9359d9a5d2bd60638f692e2c2e44c015adb4490cbbc",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "e2f59e29a5ac283c5a90b2df0a47f7cab03ab496f8dcc4061ab9ed570cdce7a9",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "488aac6c04f2ab9de3aa43505948d4b199a94be9057adbe04ce295a36af793fb",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "f9c416384a05ba8c049659ac97f6882837f567baba99c6ad7cf625e75df184f8",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "14ad892ff19a1b2dd093cef2de79d014bb11d915198b56c27376c54c181244c5",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "89a8bddf57765ad22566c28e893c8c65a5e861564bf1d370fce893da233b8032",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "b68fdf8541bcd4ee01ddcc24737739e5c9f42f2ace6d225233dd37c0050dfe9e",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "3c88fc53dbd0eafaf0582e7a0a084b172e59d4056d07c345336bb12564f2b65d",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "bb4b63b9704f9bfc15ddda232c826a4d490954a7ae54490821a66f6ef38859ee",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "a4c24f7e056404c05f3717e0a0fce3f039eea750c93f41ddd89a7d97fc52ce41",
+      "label": 0,
+      "group": "Madurai",
+      "split": "train"
+    },
+    {
+      "sha256": "9e1e061113748e6b3b2fde717d0a96f303b3e74106de814ae733dc4c776e2bbe",
+      "label": 0,
+      "group": "Panaji",
+      "split": "train"
+    },
+    {
+      "sha256": "a60e4d659ed734da87e0c1893a7e37a91573cb7fe1c2b55ab7a93acaf7d2a24f",
+      "label": 0,
+      "group": "Panaji",
+      "split": "train"
+    },
+    {
+      "sha256": "ef69b4d7c1f8b3b70da384feb6a8c2da05c490cb314db0f6a256f1f55629d561",
+      "label": 0,
+      "group": "Panaji",
+      "split": "train"
+    },
+    {
+      "sha256": "cccea9af42560cff9feba658c334004385045885e32b8decfcdd18b744360d49",
+      "label": 0,
+      "group": "Panaji",
+      "split": "train"
+    },
+    {
+      "sha256": "c11bd499bba2fd8f0b546e3bb115e517d14603f501028e931baf36939c1ab0f9",
+      "label": 0,
+      "group": "Panaji",
+      "split": "train"
+    },
+    {
+      "sha256": "e698bcd1d4e290146855362ce00d334396dd83e1c3e1cb3be2b8cd557d797f97",
+      "label": 0,
+      "group": "Panaji",
+      "split": "train"
+    },
+    {
+      "sha256": "9501c9a17bc25a5b65a50ca32952f964a3669f2c986d3c959b4906e8d3805915",
+      "label": 0,
+      "group": "Panaji",
+      "split": "train"
+    },
+    {
+      "sha256": "5367abf5ad9073e9c547c04d5412b83115b1dc6395fbd4ce893fd12bdbf9e69d",
+      "label": 0,
+      "group": "Panaji",
+      "split": "train"
+    },
+    {
+      "sha256": "c2af1ced0d41f7a968df68aec42d496523f6648ee6ffc73d8d5f468639af45e0",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "88a35fbb04a73585ce31073793b9125a7777122d79bb82b6d117bb108ecf63b7",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "4fc9faaf6c4753cf2f7a8dccbeb78d9e036c43637a8d212b0ea70f973eb4cd02",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "9704b86f629738c3c086f0459d2492809b1ec9f60c0d210aedb23abc7da08b68",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "1a0d859876167b2894048cb6a3e7a2e8fe24dff58afdcfe1bfe9a207c61cf798",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "8c6c6654d6b60f3412b0fff29a9e17fdd53ce31ab89241f8c5678e9e2155a666",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "db1092432c354c85093f4e783e2add3f66c02b218df58ba0328af7978c771273",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "e9b87dd4a10e6fe4541414fab793e520385b0b42750e72e43995deddcd2f7eef",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "07ba87e27dc3b419705108049e337523e2eac1cb7b988fdf573a51847fbd8bdc",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "77b1fc4416d92e3cfdd8f2c1f44e691e59ecbe5958a3c05c6a555dd29bc7780e",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "06b3c41e636eaf14c08a1fa3e29be13028187efc287295d2565536ccc129d99b",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "c38f8e8a79dc07b255e29ea2c8da83bf339156bd3526c905b089147315aaf9ce",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "ed9168e1d908c33247133e4b5f81bd53bd1781a9b0f123332e6dc30c476df0f9",
+      "label": 0,
+      "group": "Chennai",
+      "split": "train"
+    },
+    {
+      "sha256": "3698a3716d835e40c6fc99fb000429db588edc3e593d2f34fd8d86e0ff2b8031",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "35ddf185ebb4f6dfdaf5303a2e894e80f6aaf9a98b29527a1f3352d03567f3a7",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "56e71da564f8bf8ad0f67982a3ae35c03b81de1b293bbd85331d98cae9c1a033",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "9c8bccb071c530d8151c5f5269f741ce71ba464a95ceeb93fbe5f84352d750fb",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "8b4ae94ed3bf680480746b268588a914e8b0b023a408f033cd2ea29da09f5e5a",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "32076feece36d43752d40fa88dc50e78b06fabc9d16600c40c4d053565cff60b",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "8c839636324ac4ebfe7a29ffc36e44758ccb1a99e0777e1003c0704482245384",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "4d78cab232e6ac21f45d601d235c13bb6cadc566259b8d6ee32447f670e6b35d",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "2147e4c1022e18cca6fcc90e48dc3f5bc5b1744cb43a13c33f569fb03503662f",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "c276b1d5b09a4724ff9dc0ace8a9e7baca8969281cc001dce138cc6be942e59f",
+      "label": 0,
+      "group": "Colombo",
+      "split": "train"
+    },
+    {
+      "sha256": "733fa359325ae0681265204c93dffd776492f11fd94fad76af8191e9303793a0",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "1beed1839adf66e22e4cb4ec7d5328d85f9536519f2b64a0a181f3bb9a6add2b",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "8478bbd2d86aebb6bbd6d4f6d97b8e75b538281578064871335d21b182211e89",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "635450f9cc5775210be835bf63fb416d537f7599618607715b76854956d97692",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "c8fd9644a0a3738e517265c1f1f226f52ead397eb387e2878968035d5e04eb21",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "7d7ce0974b2041ff80b3b6bc0adecea6eeb3b161e8a1c37e2d7545a8460185b8",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "9ebde26fff7e5aa2f180c2396cf582ca6b3312a66c160dae05b898d260236fc2",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "db24dc35cdc6dbe652ea11c07e33a1c481a655ee07875d7bfac340ab2ff6d1ea",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "78086a9a209977fefcf014b84667d7e10f4dcc43ee034240220f64b9392ef1a4",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "010221f44ed13213b173e8b73f46f5c50c6214c350a2ea1f09dc977a36d54b54",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "9d842100bad92bc0deddbd8d48ad4697b59f649ff7c4c8fb70abd3ca9329e81d",
+      "label": 0,
+      "group": "Kandy",
+      "split": "train"
+    },
+    {
+      "sha256": "1f8dbdfc98f5ccc895b8db041f3602d7f267aa48cb0c760a6acc3a5ab8f4b8fe",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "f4c10cc1aad018acb07f32a40dc4970eb537ed6b6c03453e7e75c0bd3bb53ead",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "3fbd65376f04a4e2c015875ff4878b836a11cbfc13cbf5b5923e9efe99599cdd",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "e58a965861f27da686691d930430d622202ea58bef404713a055cf1551b1ec00",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "53d8ba77e9d4a49b2e3d333862769afac18e897f26dfd347e311fddf5bb66804",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "c7ca9de62cc2f26f391c8707bc5cb1141917d54d778164f7054207d119508aff",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "6d2a15bbc792894404969d3f9547426aa01068b61a55deb2028466e6aff076ef",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "a15373982d70e4d532b321c98ec8ae62a8de322de1194994284cd95d03638c00",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "44e3b87c4813a9836fa98b3c556d74eb35229bfd00aa59092772c0d1661ea045",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "45bd5c4c6402ad7b9d7920fc5527cae225d3b5bdee8feaa692c8577215289beb",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "acc9fc21b7b72dbbda0c35b1b72bce56b268e152dcd5257022df7ab7e523ad2a",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "3fd96bfba91b7e661f8d0f9ee38ff4f196afc528cbacad69e8bb56567e2a8256",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "6aa59ecc8b7ee75711d045a13b6b1d1d5f1bb410a329d702532aeb4323f3ee5c",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "3aa73478eb9db2d6505e60e8ef3352c66955a12d90c3fdd0415d4e7618283bca",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "3ab544d2625145de60754c440549776c4f0af036fcd95c4f97ad35ec829e810c",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "ab3d1f08aa367061e43d0e634bd6af21511292c8f18ea06cda6cdc9c953a3b63",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "7eb7c81c4803cf576fc582d599beb96854d03cf6417ebf36e5b54db92a50052f",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "cd4f6767666e3600b7c4128ff17ca46e4265bf494da4352ea76923fd81ace5dd",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "3c0b48e335e8301cb07f4f30a309858cc7b649ae1642c901a19f51753028a081",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "26aec5a8d3f166d31181e306a85b495e7e53f56569cffe5858c63f3040b9e138",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "e26142ee1c640ad83a40f325909e09f869981263d3b8459b393502696f7d205e",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "be40aac02c0bdc5d95b8021b88b9a9a5a668cba590914486c472c39e43e76c71",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "e95662bb6ac0a1ded7b3cb264ae7ee2559e05c6ad3ae93a6dc83a0b7b58ed99e",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "4b1d62ff49523cc7053e2f16cbc2f215456b60835c2161d3a2a0707b540ccb56",
+      "label": 0,
+      "group": "Nagercoil",
+      "split": "test"
+    },
+    {
+      "sha256": "70a7bc291240f46ce10bc32c225cca5e2d83c7fb399a15a317fe127be037671a",
+      "label": 0,
+      "group": "Tirunelveli",
+      "split": "test"
+    },
+    {
+      "sha256": "8d66f8447aee54cf2a7c4c14776c87bfbfc348f78ab830d3286c312e1a49e0f6",
+      "label": 0,
+      "group": "Tirunelveli",
+      "split": "test"
+    },
+    {
+      "sha256": "bbb88f5f01290c3d419d03c15be3a888ed20b039bb8f2b5a30e066316862a322",
+      "label": 0,
+      "group": "Tirunelveli",
+      "split": "test"
+    },
+    {
+      "sha256": "219596647af172ec8684c997b3fe0c8bbb1296f8dba6a924168af5630e00cf6f",
+      "label": 0,
+      "group": "Tirunelveli",
+      "split": "test"
+    },
+    {
+      "sha256": "2f8123a044d957fe182bb75d580e41e383df530a934f283b99f77a58e4709977",
+      "label": 0,
+      "group": "Tirunelveli",
+      "split": "test"
+    },
+    {
+      "sha256": "e2a2a7ea2e9f957b044d8b94a8c2a8ce163d63e57c3d591af10f5cf08e7b37df",
+      "label": 0,
+      "group": "Tirunelveli",
+      "split": "test"
+    },
+    {
+      "sha256": "8096c407233185eeca5b53ea019cb43b3b8df4fbf8ba0e26083f5415572611dc",
+      "label": 0,
+      "group": "Tirunelveli",
+      "split": "test"
+    },
+    {
+      "sha256": "9f72470f5b09e83d8ff5d66754ac81b888267e9e58145d610050a0a5152ee748",
+      "label": 0,
+      "group": "Shivamogga",
+      "split": "test"
+    },
+    {
+      "sha256": "9baab7fc4fdbaad89f261847a6d3097c461ff8a2406f6ff25be13464d18df545",
+      "label": 0,
+      "group": "Shivamogga",
+      "split": "test"
+    },
+    {
+      "sha256": "d39d1bec6a304bd22f633a8f8912a8f08f5d10f9bdc847d1c9274f2992eef27a",
+      "label": 0,
+      "group": "Shivamogga",
+      "split": "test"
+    },
+    {
+      "sha256": "fcce34c6394dd1a5c286784dccb0a6cf9fcefa4461215d20c30b08f9d7905415",
+      "label": 0,
+      "group": "Shivamogga",
+      "split": "test"
+    },
+    {
+      "sha256": "19d2aad93a8b13d997ed20e59665e65cf10eb15e0435f8f51a1844d2644295f7",
+      "label": 0,
+      "group": "Shivamogga",
+      "split": "test"
+    },
+    {
+      "sha256": "63d7e804892442124f9af7e429aeb250955b8b4afb75b54571c12d8d9d8f6801",
+      "label": 0,
+      "group": "Shivamogga",
+      "split": "test"
+    },
+    {
+      "sha256": "100956360ba93487b80152f3d72f4bb6c391ff51e46eab6b3d4e2b3206e02de5",
+      "label": 0,
+      "group": "Shivamogga",
+      "split": "test"
+    },
+    {
+      "sha256": "23a53de30043a6da99c1147fee51abd8a8cdef56d76df698e8a5225e3ea455b0",
+      "label": 0,
+      "group": "Shivamogga",
+      "split": "test"
+    },
+    {
+      "sha256": "b9bf1ab12b5e1a61f89ccd99a2e931ab7b97d956d7d605565bad0f2f9aee2e19",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "ac6d5f030975a122ab55dafbb848bafd98ab30386f012d444afca02f0f6f105c",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "e9a6ae475ecd98db5b7679d9e377867d8b4420781ad6aa2967b99263dd9e5ed2",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "32e2a3f6e6cf4ccd689c4b1b8903f0cb80a35bc2019798c1e5c6f8a7e86901be",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "23abbcd96819150b51eae6f4a6c969913da168704c02f45df1aad65f8fb2fb4f",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "d69fd035de4cfe4793b7589ddfcb4e6ec0217aab640e90d81f59deede7953032",
+      "label": 1,
+      "group": "Kottayam",
+      "split": "val"
+    },
+    {
+      "sha256": "207145312fb4935b67fd79f15d0fb9e36338b964f93a2f7563ac7e4704888c6e",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "609b5bfce33e5b52d801cf8508f7c6f2c4b6cb6128f7b153d79a1a15943dadb3",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "0ec0fe2014d46deb52adc61c0b14aec4c5553694e4e8039c5d0e01f6cc0c3554",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "231e7390d25565be483357cde77a936456488487d5a1b199e258eecf89ab6441",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "9eb1c881ee060430ca888062a260dfef883bc587f654394d5b0c5022a058bfb2",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "e03db811e43c2f73287ec65bb2b6f33f3150b49ca9706092ce969aff98c02572",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "9104c6a4f58aa538da0969148ecc346c366924f5f3f35cfc122fdd8538caf60e",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "f4da5ab1c810a70754b667d67e91d1e137fe41e7781852b26fc650df2e8d18ce",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "7953c09a203b2648ea9eaa9959ac9c94b294fd8ff4974bf8be6e27018fe76eab",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "71d0f42ff604fc6e0e38784173e3012260e13acf137c5bfe39de940d9d530b22",
+      "label": 1,
+      "group": "Kalpetta",
+      "split": "val"
+    },
+    {
+      "sha256": "995aaea12e418c2a34416e1c7481b42f931c3059aa5bbbbd0ae8eaeb9aca7d13",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "ee434f39d26d2d87ffe287e89afd97cdd35905a576720d592f69af9d20cec8db",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "5ac51de3217a01afe52391aa3cb219da19c30fb7665e09a30f68c43d2b707439",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "d712017a99eb19d28784e7a797f89b637d4b88182bffef93495b19b8bbc981cd",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "2154fc47f0916b083d640ac75ba9744531cc30b32ea6b55fd971a032811c43c3",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "628266735ed9c15203aa3eeb46b56e09dd05538911c8366272eb4f3c51a31492",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "53a2885547288fd280c431aeb36703ee3eb24babad0df6c097629417ee2f02ed",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "124422e4e3445461030969c2f67003801ba85c08979a4adfbf35a0808098d953",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "f7eb9e1872f9b0ac02d1674f725f7daf6af2a170d500b721e27735a2cb5242c8",
+      "label": 0,
+      "group": "Udupi",
+      "split": "val"
+    },
+    {
+      "sha256": "a71034ff707aa7cf61b5627c859195a3802219492612e7f4ca99dfde41614ba8",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "71922cf4ccbc4bbd10ddfc8176e7155ca9fc96b56d2a98a0cd1bb107c00829c2",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "23a48a610d58852d642c26eb7ee2e7a611d04fc90d106f8f4dfade7548091de3",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "b4838eb9229dd306ef0b3c144da186ba3492e87323fdbd4f848ca552daece4be",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "7d7587630239fac16c560ba8e7bb942b1de5a2142f5c38eec485ae22d3509d8c",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "07feb7e9376ff3f4d6cea48b57f9f93901fcdd1503edf0648fd9693ae2107f42",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "200b5525fbb5c02b489f47285e1d9b4ea29b040f0d45b9ed4b67abe714fa5c0a",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "b28ba98f32c6b6eb580d89bd704816d20f05bd9174f82093cdd2e5d7cd9ab5ed",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "d308f2cfad4832d64d4197c00776c7ae6c74e0901f12f9c84efb6752fefaa384",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    },
+    {
+      "sha256": "fa50d38f6a3bf3ff267c4fcce24befdee8046844ac36e1c4d67308194e3934f0",
+      "label": 0,
+      "group": "Ooty",
+      "split": "val"
+    }
+  ],
+  "held_out_geoclip_top1_boundary_baseline": {
+    "images": 53,
+    "accepted": 53,
+    "uncertain": 0,
+    "coverage": 1.0,
+    "accuracy_counting_uncertain_as_incorrect": 0.6037735849056604,
+    "accuracy_on_accepted": 0.6037735849056604,
+    "classes": {
+      "non_kerala": {
+        "precision": 0.5777777777777777,
+        "recall_including_abstentions": 0.9285714285714286,
+        "support": 28,
+        "predicted": 45,
+        "correct": 26
+      },
+      "kerala": {
+        "precision": 0.75,
+        "recall_including_abstentions": 0.24,
+        "support": 25,
+        "predicted": 8,
+        "correct": 6
+      }
+    },
+    "balanced_accuracy_including_abstentions": 0.5842857142857143
+  },
+  "held_out_by_location": {
+    "Kasaragod": {
+      "images": 13,
+      "accepted": 1,
+      "uncertain": 12,
+      "coverage": 0.07692307692307693,
+      "accuracy_counting_uncertain_as_incorrect": 0.07692307692307693,
+      "accuracy_on_accepted": 1.0,
+      "classes": {
+        "non_kerala": {
+          "precision": null,
+          "recall_including_abstentions": null,
+          "support": 0,
+          "predicted": 0,
+          "correct": 0
+        },
+        "kerala": {
+          "precision": 1.0,
+          "recall_including_abstentions": 0.07692307692307693,
+          "support": 13,
+          "predicted": 1,
+          "correct": 1
+        }
+      },
+      "balanced_accuracy_including_abstentions": 0.07692307692307693
+    },
+    "Nagercoil": {
+      "images": 13,
+      "accepted": 0,
+      "uncertain": 13,
+      "coverage": 0.0,
+      "accuracy_counting_uncertain_as_incorrect": 0.0,
+      "accuracy_on_accepted": null,
+      "classes": {
+        "non_kerala": {
+          "precision": null,
+          "recall_including_abstentions": 0.0,
+          "support": 13,
+          "predicted": 0,
+          "correct": 0
+        },
+        "kerala": {
+          "precision": null,
+          "recall_including_abstentions": null,
+          "support": 0,
+          "predicted": 0,
+          "correct": 0
+        }
+      },
+      "balanced_accuracy_including_abstentions": 0.0
+    },
+    "Pathanamthitta": {
+      "images": 6,
+      "accepted": 3,
+      "uncertain": 3,
+      "coverage": 0.5,
+      "accuracy_counting_uncertain_as_incorrect": 0.5,
+      "accuracy_on_accepted": 1.0,
+      "classes": {
+        "non_kerala": {
+          "precision": null,
+          "recall_including_abstentions": null,
+          "support": 0,
+          "predicted": 0,
+          "correct": 0
+        },
+        "kerala": {
+          "precision": 1.0,
+          "recall_including_abstentions": 0.5,
+          "support": 6,
+          "predicted": 3,
+          "correct": 3
+        }
+      },
+      "balanced_accuracy_including_abstentions": 0.5
+    },
+    "Shivamogga": {
+      "images": 8,
+      "accepted": 0,
+      "uncertain": 8,
+      "coverage": 0.0,
+      "accuracy_counting_uncertain_as_incorrect": 0.0,
+      "accuracy_on_accepted": null,
+      "classes": {
+        "non_kerala": {
+          "precision": null,
+          "recall_including_abstentions": 0.0,
+          "support": 8,
+          "predicted": 0,
+          "correct": 0
+        },
+        "kerala": {
+          "precision": null,
+          "recall_including_abstentions": null,
+          "support": 0,
+          "predicted": 0,
+          "correct": 0
+        }
+      },
+      "balanced_accuracy_including_abstentions": 0.0
+    },
+    "Thiruvananthapuram": {
+      "images": 6,
+      "accepted": 0,
+      "uncertain": 6,
+      "coverage": 0.0,
+      "accuracy_counting_uncertain_as_incorrect": 0.0,
+      "accuracy_on_accepted": null,
+      "classes": {
+        "non_kerala": {
+          "precision": null,
+          "recall_including_abstentions": null,
+          "support": 0,
+          "predicted": 0,
+          "correct": 0
+        },
+        "kerala": {
+          "precision": null,
+          "recall_including_abstentions": 0.0,
+          "support": 6,
+          "predicted": 0,
+          "correct": 0
+        }
+      },
+      "balanced_accuracy_including_abstentions": 0.0
+    },
+    "Tirunelveli": {
+      "images": 7,
+      "accepted": 0,
+      "uncertain": 7,
+      "coverage": 0.0,
+      "accuracy_counting_uncertain_as_incorrect": 0.0,
+      "accuracy_on_accepted": null,
+      "classes": {
+        "non_kerala": {
+          "precision": null,
+          "recall_including_abstentions": 0.0,
+          "support": 7,
+          "predicted": 0,
+          "correct": 0
+        },
+        "kerala": {
+          "precision": null,
+          "recall_including_abstentions": null,
+          "support": 0,
+          "predicted": 0,
+          "correct": 0
+        }
+      },
+      "balanced_accuracy_including_abstentions": 0.0
+    }
+  },
+  "held_out_geoclip_coordinate_error": {
+    "images_with_coordinates": 53,
+    "median_km": 477.87299532270924,
+    "within_25km": 0.0
+  }
+}

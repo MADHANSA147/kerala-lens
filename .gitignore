@@ -1,0 +1,17 @@
+.venv/
+assets/
+cache/
+data/pilot/images/
+data/pilot/source-cache/
+__pycache__/
+*.pyc
+
+# Local datasets, private uploads, and generated predictions
+data/
+offline-test.json
+verification.json
+web-test-result.json
+.env
+.env.*
+*.log
+*.zip
